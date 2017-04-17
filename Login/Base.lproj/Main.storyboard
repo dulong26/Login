@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,122 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="M0H-4w-PjH">
+                                <rect key="frame" x="-20" y="20" width="415" height="647"/>
+                                <color key="backgroundColor" red="1" green="0.25972872715889428" blue="0.68553506789860252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zz5-GT-Efv">
+                                <rect key="frame" x="40" y="514" width="295" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.65144623800000001" blue="0.39344131780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="ZgX-pf-7fl"/>
+                                    <constraint firstAttribute="height" constant="40" id="b2G-Av-TvA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="v2g-v6-LWz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Thêm người dùng"/>
+                                <connections>
+                                    <action selector="actionThemUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IBw-OA-LBf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHM-Wq-UZX">
+                                <rect key="frame" x="40" y="464" width="295" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.65144623800000001" blue="0.39344131780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9Wl-cE-vcK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="sM3-qk-TYE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Danh sách người dùng"/>
+                                <connections>
+                                    <action selector="actionDanhSach:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbc-wr-cwa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tên đăng nhập" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aM9-QR-QOn">
+                                <rect key="frame" x="40" y="314" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jfs-JM-Ges"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Vu-5R-TRf">
+                                <rect key="frame" x="40" y="364" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KXO-9d-lJJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcZ-y6-qTK">
+                                <rect key="frame" x="40" y="414" width="295" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.65144623804463109" blue="0.39344131777458402" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nU9-QE-fUm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Đăng nhập"/>
+                                <connections>
+                                    <action selector="actionDangNhap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wDx-XL-T1Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or2-zE-Ziw">
+                                <rect key="frame" x="40" y="563" width="295" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.65144623800000001" blue="0.39344131780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="HuO-8q-jpf"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Jrm-Ml-EwZ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="WT1-aZ-v53"/>
+                                    <constraint firstAttribute="height" constant="40" id="v1b-5S-K0C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Xóa người dùng"/>
+                                <connections>
+                                    <action selector="actionXoaUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dfj-ud-3by"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zz5-GT-Efv" secondAttribute="trailing" constant="40" id="15X-9y-t1j"/>
+                            <constraint firstItem="6Vu-5R-TRf" firstAttribute="top" secondItem="aM9-QR-QOn" secondAttribute="bottom" constant="10" id="3Q0-7s-wzt" userLabel="Mật khẩu.top = Tên đăng nhập.bottom + 10"/>
+                            <constraint firstItem="M0H-4w-PjH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-20" id="3eK-Ba-3sx"/>
+                            <constraint firstItem="XHM-Wq-UZX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="572-cH-nBr"/>
+                            <constraint firstAttribute="trailing" secondItem="Or2-zE-Ziw" secondAttribute="trailing" constant="40" id="8EM-B4-s6f"/>
+                            <constraint firstAttribute="trailing" secondItem="XHM-Wq-UZX" secondAttribute="trailing" constant="40" id="9dN-6M-8CM"/>
+                            <constraint firstItem="aM9-QR-QOn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="FOW-Da-sZU"/>
+                            <constraint firstItem="zz5-GT-Efv" firstAttribute="top" secondItem="XHM-Wq-UZX" secondAttribute="bottom" constant="10" id="FVh-U5-3wJ"/>
+                            <constraint firstAttribute="trailing" secondItem="aM9-QR-QOn" secondAttribute="trailing" constant="40" id="Hhp-h2-MqF"/>
+                            <constraint firstItem="aM9-QR-QOn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J9z-1q-ElI"/>
+                            <constraint firstAttribute="trailing" secondItem="rcZ-y6-qTK" secondAttribute="trailing" constant="40" id="KIV-XZ-nRv"/>
+                            <constraint firstItem="6Vu-5R-TRf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="KwY-RJ-T64"/>
+                            <constraint firstAttribute="trailing" secondItem="M0H-4w-PjH" secondAttribute="trailing" constant="-20" id="MUV-5O-1y4"/>
+                            <constraint firstItem="rcZ-y6-qTK" firstAttribute="top" secondItem="6Vu-5R-TRf" secondAttribute="bottom" constant="10" id="Qzp-dW-uo0"/>
+                            <constraint firstItem="aM9-QR-QOn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rcz-ul-unj"/>
+                            <constraint firstItem="zz5-GT-Efv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="WpU-wX-5Rr"/>
+                            <constraint firstItem="Or2-zE-Ziw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="aZm-zD-Dwc"/>
+                            <constraint firstItem="Or2-zE-Ziw" firstAttribute="top" secondItem="zz5-GT-Efv" secondAttribute="bottom" constant="10" id="apV-YR-vMI"/>
+                            <constraint firstItem="XHM-Wq-UZX" firstAttribute="top" secondItem="rcZ-y6-qTK" secondAttribute="bottom" constant="10" id="dMN-E9-BN7"/>
+                            <constraint firstAttribute="trailing" secondItem="6Vu-5R-TRf" secondAttribute="trailing" constant="40" id="hQ7-be-UQH"/>
+                            <constraint firstItem="rcZ-y6-qTK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="i5P-kb-WrM"/>
+                            <constraint firstItem="M0H-4w-PjH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jd0-yJ-yzN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M0H-4w-PjH" secondAttribute="bottom" id="vE1-jn-Zuc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tfPassword" destination="6Vu-5R-TRf" id="ORr-Do-Bhr"/>
+                        <outlet property="tfUser" destination="aM9-QR-QOn" id="GJp-b2-HPL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background1.jpg" width="1080" height="1920"/>
+    </resources>
 </document>
