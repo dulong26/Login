@@ -29,9 +29,7 @@
                                 <rect key="frame" x="40" y="514" width="295" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.65144623800000001" blue="0.39344131780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="ZgX-pf-7fl"/>
                                     <constraint firstAttribute="height" constant="40" id="b2G-Av-TvA"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="v2g-v6-LWz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Thêm người dùng"/>
@@ -44,7 +42,6 @@
                                 <color key="backgroundColor" red="1" green="0.65144623800000001" blue="0.39344131780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9Wl-cE-vcK"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="sM3-qk-TYE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Danh sách người dùng"/>
@@ -82,13 +79,10 @@
                                     <action selector="actionDangNhap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wDx-XL-T1Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or2-zE-Ziw">
-                                <rect key="frame" x="40" y="563" width="295" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or2-zE-Ziw">
+                                <rect key="frame" x="40" y="564" width="295" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.65144623800000001" blue="0.39344131780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="HuO-8q-jpf"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Jrm-Ml-EwZ"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="WT1-aZ-v53"/>
                                     <constraint firstAttribute="height" constant="40" id="v1b-5S-K0C"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>

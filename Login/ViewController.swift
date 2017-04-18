@@ -75,16 +75,35 @@ class ViewController: UIViewController {
             print("Không đủ thông tin để xóa tài khoản")
             existUser = false
         } else {
-            for name in users {
-                if (name.key == delUser)&&(name.value == delPass) {
+            for name in users.keys {
+                if (name == delUser) {
                     existUser = true
+                    break
                 }
             }
+//            for name in users {
+//                if (name.key == delUser) {
+//                    if (name.value == delPass) {
+//                        existUser = true
+//                        break
+//                    } else {
+//                        print("Không đúng mật khẩu")
+//                    }
+//                } else {
+//                    print("Không đúng tên tài khoản")
+//                }
+//            }
         }
         
         if existUser {
-            print("Đã xóa tài khoản")
-            users.removeValue(forKey: delUser!)
+            if delPass == users[delUser!] {
+                print("Đã xóa tài khoản")
+                users.removeValue(forKey: delUser!)
+            } else {
+                print("Không đúng mật khẩu")
+            }
+        } else {
+            print("Tài khoản không tồn tại")
         }
     }
 }
